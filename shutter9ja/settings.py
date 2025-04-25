@@ -198,7 +198,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 # EMAIL_USE_SSL = True
 EMAIL_HOST_USER = 'noreply@shutter9ja.org'
-EMAIL_HOST_PASSWORD = 'OhteVtW9Qx9g9TtGZG'  # Use App Password for Gmail
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')  # Use App Password for Gmail
 DEFAULT_FROM_EMAIL = 'noreply@shutter9ja.org'
 
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
