@@ -11,7 +11,6 @@ def send_confirmation_email(sender, instance, created, **kwargs):
         message = f"""
 Hello {instance.full_name},
 
-
 Thank you for registering for the Shutter 9ja Photo Contest — we’re excited to have you on board! 📸
 However, this is a gentle reminder that incomplete registrations will be removed.
 
