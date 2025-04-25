@@ -27,6 +27,8 @@ If you’ve already completed these steps — you’re all set! 🙌
 
 Thank you for being part of the movement!
 
+Here is your entry link, feel free to share it with others. https://shutter9ja.org/entries/{instance.id}
+
 Special Hint: Because you registered early you can start sharing your link to your friends, family and people to vote for you so that you can get the required amount of votes early enough to move into the next phase of the competition 😉.
 
 Warm regards,
