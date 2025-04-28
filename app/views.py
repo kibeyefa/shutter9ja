@@ -8,8 +8,12 @@ from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework import status, viewsets
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.pagination import PageNumberPagination
 
 # Create your views here.
+class TwentyPerPagePagination(PageNumberPagination):
+    page_size = 16  # 20 items per page
+
 class CompetitionListView(ListAPIView):
     queryset = Competition.objects.all().order_by("-created")
     serializer_class = CompetitionListSerializer
@@ -33,6 +37,7 @@ class EntryListView(ListCreateAPIView):
     serializer_class = EntryListSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ["competition"]
+    pagination_class = TwentyPerPagePagination
 
     def create(self, request, *args, **kwargs):
         images = request.FILES.getlist("images")
