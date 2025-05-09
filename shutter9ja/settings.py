@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     # created apps
     "app",
     # installed apps
+    'import_export',
     "rest_framework",
     "django_extensions",
     "django_filters",
