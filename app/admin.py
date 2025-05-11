@@ -7,13 +7,13 @@ from import_export.admin import ExportMixin
 class PhotoEntryResource(resources.ModelResource):
     class Meta:
         model = Entry
-        fields = ("full_name", "phone", "instagram_username", "email") 
+        fields = ("full_name", "phone", "instagram_username", "email", "id") 
 
 
 
 class PhotoEntryAdmin(ExportMixin, admin.ModelAdmin):
     resource_class = PhotoEntryResource
-    list_display = ("full_name", "phone", "instagram_username", "email")
+    list_display = ("full_name", "phone", "instagram_username", "email", "id")
 
 admin.site.register(Entry, PhotoEntryAdmin)
 
