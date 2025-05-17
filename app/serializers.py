@@ -34,3 +34,11 @@ class EntryVoteSerializer(serializers.ModelSerializer):
 
 class VoteSubmissionSerializer(serializers.Serializer):
     vote_count = serializers.IntegerField(min_value=4)
+
+
+
+class ContactSerializer(serializers.Serializer):
+    fullName = serializers.CharField(max_length=100)
+    email = serializers.EmailField()
+    subject = serializers.CharField(max_length=150, allow_blank=True)
+    message = serializers.CharField()

@@ -8,4 +8,5 @@ urlpatterns = [
     path("competitions/", CompetitionListView.as_view()),
     path("competitions/current/", GetCurrentCompetitionView.as_view()),
     path("competitions/<id>/", SingleCompetitionView.as_view()),
+    path("contact/", ContactAPIView.as_view(), name="contact-api"),
 ]
